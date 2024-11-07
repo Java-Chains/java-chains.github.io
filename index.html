@@ -1,0 +1,301 @@
+<html><head><base href="." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java Chains Project</title>
+
+<!-- 引入必要的CSS库 -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
+<style>
+:root {
+  --neon-text-color: #f40;
+  --neon-border-color: #08f;
+}
+
+body {
+  background: linear-gradient(135deg, #000428, #004e92);
+  color: #fff;
+  font-family: 'Courier New', monospace;
+}
+
+.cyberpunk-card {
+  background: rgba(18, 18, 18, 0.9);
+  border: 1px solid var(--neon-border-color);
+  box-shadow: 0 0 10px var(--neon-border-color);
+  transition: all 0.3s ease;
+}
+
+.cyberpunk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--neon-border-color);
+}
+
+.neon-text {
+  color: var(--neon-text-color);
+  text-shadow: 0 0 5px var(--neon-text-color);
+}
+
+.matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.module-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Add new style for advanced config card */
+.advanced-config {
+  grid-column: span 4;
+}
+
+/* Ensure proper fallback for smaller screens */
+@media (max-width: 1200px) {
+  .advanced-config {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 900px) {
+  .advanced-config {
+    grid-column: span 1;
+  }
+}
+
+.credits {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  background: rgba(18, 18, 18, 0.9);
+  border-top: 1px solid var(--neon-border-color);
+}
+
+.credits-title {
+  color: var(--neon-text-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.credits-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.credit-item {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--neon-border-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.credit-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--neon-border-color);
+}
+
+.credit-item.highlight {
+  border-color: #f40;
+  box-shadow: 0 0 15px #f40;
+  color: #f40;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<canvas id="matrix" class="matrix-bg"></canvas>
+
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-4xl font-bold text-center neon-text mb-12">Java Chains Project</h1>
+  
+  <div class="grid-container">
+    <!-- Java Native Payload Module -->
+    <div class="cyberpunk-card p-6 rounded-lg">
+      <i class="mdi mdi-language-java module-icon neon-text"></i>
+      <h2 class="text-xl font-bold mb-4">Java Native Payload</h2>
+      <ul class="space-y-2">
+        <li>→ Commons Collections</li>
+        <li>→ Commons Beanutils</li>
+        <li>→ JDK7u21</li>
+      </ul>
+      <button class="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md transition">Generate</button>
+    </div>
+
+    <!-- Hessian Module -->
+    <div class="cyberpunk-card p-6 rounded-lg">
+      <i class="mdi mdi-cube-outline module-icon neon-text"></i>
+      <h2 class="text-xl font-bold mb-4">Hessian Payload</h2>
+      <ul class="space-y-2">
+        <li>→ CommonsCollections</li>
+        <li>→ JdbcRowSetImpl</li>
+        <li>→ Templates</li>
+      </ul>
+      <button class="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md transition">Generate</button>
+    </div>
+
+    <!-- Shiro Module -->
+    <div class="cyberpunk-card p-6 rounded-lg">
+      <i class="mdi mdi-shield-outline module-icon neon-text"></i>
+      <h2 class="text-xl font-bold mb-4">Shiro Payload</h2>
+      <ul class="space-y-2">
+        <li>→ CommonsBeanutils</li>
+        <li>→ CommonsCollections</li>
+        <li>→ Click</li>
+      </ul>
+      <button class="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md transition">Generate</button>
+    </div>
+
+    <!-- Other Module -->
+    <div class="cyberpunk-card p-6 rounded-lg">
+      <i class="mdi mdi-dots-horizontal-circle-outline module-icon neon-text"></i>
+      <h2 class="text-xl font-bold mb-4">Other Tools</h2>
+      <ul class="space-y-2">
+        <li>→ FastJson</li>
+        <li>→ Jackson</li>
+        <li>→ Log4j</li>
+      </ul>
+      <button class="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md transition">Generate</button>
+    </div>
+
+    <!-- JNDI Server Module -->
+    <div class="cyberpunk-card p-6 rounded-lg">
+      <i class="mdi mdi-server-network module-icon neon-text"></i>
+      <h2 class="text-xl font-bold mb-4">JNDI Server</h2>
+      <button class="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md transition">Start Server</button>
+    </div>
+
+    <!-- Fake MySQL Server Module -->
+    <div class="cyberpunk-card p-6 rounded-lg">
+      <i class="mdi mdi-database module-icon neon-text"></i>
+      <h2 class="text-xl font-bold mb-4">Fake MySQL Server</h2>
+      <button class="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md transition">Start Server</button>
+    </div>
+
+    <!-- JRMP Listener Module -->
+    <div class="cyberpunk-card p-6 rounded-lg">
+      <i class="mdi mdi-access-point-network module-icon neon-text"></i>
+      <h2 class="text-xl font-bold mb-4">JRMP Listener</h2>
+      <button class="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md transition">Start Listener</button>
+    </div>
+
+    <!-- Server Module -->
+    <div class="cyberpunk-card p-6 rounded-lg">
+      <i class="mdi mdi-server module-icon neon-text"></i>
+      <h2 class="text-xl font-bold mb-4">Server Tools</h2>
+      <button class="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md transition">Start Server</button>
+    </div>
+
+    <!-- Advanced Configuration -->
+    <div class="cyberpunk-card p-6 rounded-lg advanced-config">
+      <i class="mdi mdi-cog-outline module-icon neon-text"></i>
+      <h2 class="text-xl font-bold mb-4">Advanced Configuration</h2>
+      <ul class="space-y-2">
+        <li>→ Random Collection Size Control (随机集合脏数据大小支持)</li>
+        <li>→ Garbage Class Count (填充垃圾类的数量支持)</li>
+        <li>→ Utf8 Overlong Encoding (Utf8OverlongEncoding支持)</li>
+        <li>→ CB Comparator Type Selection (CB选用comparator类型支持)</li>
+        <li>→ TC_RESET Dirty Data Size (TC_RESET 脏数据大小支持)</li>
+        <li>→ Bytecode Symbol Removal (去除字节码符号信息支持)</li>
+        <li>→ Custom Bytecode Version (字节码版本自定义)</li>
+      </ul>
+      <button class="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-md transition">Configure</button>
+    </div>
+  </div>
+
+  <div class="credits">
+    <h2 class="credits-title">Special Thanks</h2>
+    <div class="credits-list">
+      <div class="credit-item highlight">Ar3h</div>
+      <div class="credit-item">4ra1n</div>
+      <div class="credit-item">SpringKill</div>
+      <div class="credit-item">ssrsec</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Matrix rain effect
+const canvas = document.getElementById('matrix');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()';
+const fontSize = 14;
+const columns = canvas.width/fontSize;
+const drops = [];
+
+for(let x = 0; x < columns; x++) {
+    drops[x] = 1;
+}
+
+function draw() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    ctx.fillStyle = '#00FF00';
+    ctx.font = fontSize + 'px monospace';
+
+    for(let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+        
+        if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
+            drops[i] = 0;
+        
+        drops[i]++;
+    }
+}
+
+setInterval(draw, 33);
+
+// Hover effects
+document.querySelectorAll('.cyberpunk-card').forEach(card => {
+    card.addEventListener('mouseover', () => {
+        card.style.setProperty('--neon-border-color', '#f40');
+    });
+    
+    card.addEventListener('mouseout', () => {
+        card.style.setProperty('--neon-border-color', '#08f');
+    });
+});
+
+// Button click effects
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        button.appendChild(ripple);
+        
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = `${size}px`;
+        
+        const x = e.clientX - rect.left - size/2;
+        const y = e.clientY - rect.top - size/2;
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        
+        setTimeout(() => ripple.remove(), 600);
+    });
+});
+</script>
+
+</body>
+</html>
