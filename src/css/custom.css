@@ -1,0 +1,78 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+    --ifm-color-primary: #2996f8;
+    --ifm-color-primary-dark: #29784c;
+    --ifm-color-primary-darker: #277148;
+    --ifm-color-primary-darkest: #205d3b;
+    --ifm-color-primary-light: #33925d;
+    --ifm-color-primary-lighter: #359962;
+    --ifm-color-primary-lightest: #3cad6e;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+    --ifm-color-primary: #25c2a0;
+    --ifm-color-primary-dark: #21af90;
+    --ifm-color-primary-darker: #1fa588;
+    --ifm-color-primary-darkest: #1a8870;
+    --ifm-color-primary-light: #29d5b0;
+    --ifm-color-primary-lighter: #32d8b4;
+    --ifm-color-primary-lightest: #4fddbf;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.profileCardListContainer {
+    display: flex; /* 启用 Flexbox 布局 */
+    flex-wrap: wrap; /* 允许项目换行 */
+    justify-content: flex-start; /* 可选：靠左对齐，或者使用 space-around, space-between 等 */
+    /* 可以设置最大宽度来限制整体容器的宽度，如果需要的话 */
+    /* max-width: 1200px;  例如，设置最大宽度 */
+    margin: 0 auto; /* 可选：如果设置了 max-width，可以使用 margin: 0 auto; 让容器水平居中 */
+}
+
+.profileCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(25% - 20px); /* 每个 profileCard 占据大约 25% 的宽度，减去一些间距 */
+    margin: 10px; /*  设置 profileCard 之间的间距 */
+    box-sizing: border-box; /* 确保 padding 和 border 包含在 width 内 */
+    /* 其他 profileCard 样式，例如边框、背景色等 */
+}
+
+.profileImage {
+    max-width: 100px; /* 限制图片最大宽度 */
+    max-height: 100px; /* 限制图片最大高度 */
+    border-radius: 50%; /* 可选：圆形头像 */
+    margin-bottom: 10px; /* 图片下方留出间距 */
+}
+
+.profileId {
+    font-weight: bold; /* ID 文字加粗 */
+    margin-bottom: 5px; /* ID 下方留出间距 */
+}
+
+.profileDescription {
+    font-size: 0.9em; /* 描述文字稍小一些 */
+    color: #555; /* 描述文字颜色 */
+    /* 其他描述文字样式 */
+}
+
+.limitedImage {
+    max-width: 100px; /* 限制图片最大宽度 */
+    max-height: 100px; /* 限制图片最大高度 */
+}
+
+.limitedImageSize {
+    max-width: 30%;
+    max-height: 30%;
+}
