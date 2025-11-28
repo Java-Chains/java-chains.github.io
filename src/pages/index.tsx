@@ -37,7 +37,7 @@ function Preview() {
     const currentLocale = i18n.currentLocale; // 从上下文中获取当前 locale
 
     // 根据 locale 动态构建图片路径
-    const imageName = currentLocale === 'en' ? 'main-en.png' : 'main.png';
+    const imageName = currentLocale === 'en' ? 'main.png' : 'main.zh-cn.png';
     const imagePath = `/img/${imageName}`;
     const imageUrl = useBaseUrl(imagePath); // 使用 useBaseUrl 解析路径
 

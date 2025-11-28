@@ -19,7 +19,7 @@ Java 反序列化原生 Payload 生成
 - C3p0：JNDI链、二次反序列化链、原生类加载链，支持两个不同的SUID版本
 - FindClass 探测类，搜集网上大部分gadget类，可探测 100+ 个类。探测 payload 中间隔插入canary，可辅助判断哪些类被拉入黑名单导致探测失败。支持手动设置、文件读取，可自定义批量探测类
 
-![](@site/static/img/main.png)
+![](@site/static/img/main.zh-cn.png)
 
 ## HessianPayload
 

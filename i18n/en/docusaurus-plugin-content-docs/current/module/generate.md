@@ -23,7 +23,7 @@ Some commonly used chains are displayed:
   in the detection payload to assist in determining which classes are blacklisted, causing detection failure. Supports
   manual setting, file reading, and custom batch detection classes.
 
-![](@site/static/img/main-en.png)
+![](@site/static/img/main.png)
 
 ## HessianPayload
 
